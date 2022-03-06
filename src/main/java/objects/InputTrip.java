@@ -34,52 +34,52 @@ public class InputTrip {
         return tapType;
     }
 
-    public String getStopId() {
-        return stopId;
-    }
-
-    public Long getPan() {
-        return pan;
-    }
-
-    public String getBusId() {
-        return busId;
-    }
-
-    public String getCompanyId() {
-        return companyId;
-    }
-
-    public Date getDateTimeUtc() {
-        return dateTimeUtc;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
     public void setTapType(String tapType) {
         this.tapType = tapType;
+    }
+
+    public String getStopId() {
+        return stopId;
     }
 
     public void setStopId(String stopId) {
         this.stopId = stopId;
     }
 
+    public Long getPan() {
+        return pan;
+    }
+
     public void setPan(Long pan) {
         this.pan = pan;
+    }
+
+    public String getBusId() {
+        return busId;
     }
 
     public void setBusId(String busId) {
         this.busId = busId;
     }
 
+    public String getCompanyId() {
+        return companyId;
+    }
+
     public void setCompanyId(String companyId) {
         this.companyId = companyId;
     }
 
+    public Date getDateTimeUtc() {
+        return dateTimeUtc;
+    }
+
     public void setDateTimeUtc(Date dateTimeUtc) {
         this.dateTimeUtc = dateTimeUtc;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setId(Long id) {
