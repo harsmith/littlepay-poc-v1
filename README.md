@@ -1,5 +1,6 @@
 # littlepay-poc-v1
 *Summary*
+
 We need to create a Java application which when given an input file in CSV format containing a single tap on or tap off per line we can create an output file containing trips made by customers.
 
 *Requirements*
@@ -18,8 +19,6 @@ Executing the code with a custom input file, this needs to be an absolute path i
 Whereas, you can also do the following command to specify a custom input and output.
 
 `mvn compile exec:java -Dexec.mainClass="Application" -Dexec.arguments="src/main/resources/taps-custom.csv,src/main/resources/trips-custom.csv"`
-
-
 
 *Assumptions*
  - All cards used in transactions have enough money to pay for the fare when the initial touch on happens.
