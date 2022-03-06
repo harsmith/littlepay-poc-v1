@@ -3,8 +3,8 @@
 We need to create a Java application which when given an input file in CSV format containing a single tap on or tap off per line we can create an output file containing trips made by customers.
 
 *Requirements*
-Maven 3.8.3+
-Java 17
+- Maven 3.8.3+
+- Java 17
 
 *How to run the application*
 Ensure the code is able to be compiled and runs all the tests by using the following command. This will also execute the code against the default trips and taps csv files.
