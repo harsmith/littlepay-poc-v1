@@ -16,9 +16,7 @@ public class OutputTrip {
     private final Long pan;
     private final String status;
 
-    public OutputTrip(Date startDateTimeUtcInput, Date stopDateTimeUtcInput, Long durationSecondsInput,
-                      String fromStopIdInput, String toStopIdInput, String fareAmountInput, String companyIdInput,
-                      String busIdInput, Long panInput, String statusInput) {
+    public OutputTrip(Date startDateTimeUtcInput, Date stopDateTimeUtcInput, Long durationSecondsInput, String fromStopIdInput, String toStopIdInput, String fareAmountInput, String companyIdInput, String busIdInput, Long panInput, String statusInput) {
         startDateTimeUtc = startDateTimeUtcInput;
         stopDateTimeUtc = stopDateTimeUtcInput;
         durationSeconds = durationSecondsInput;

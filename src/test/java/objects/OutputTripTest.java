@@ -18,9 +18,7 @@ public class OutputTripTest {
         Long panInput = 122000000000003L;
         Long duration = 60L;
 
-        OutputTrip outputTrip = new OutputTrip(date1, date2,
-                duration, "Stop1", "Stop2", "$3.25",
-                "Company71", "Bus3", panInput, "COMPLETE");
+        OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop2", "$3.25", "Company71", "Bus3", panInput, "COMPLETE");
 
         assertEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:00:00"));
         assertEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:01:00"));
@@ -41,9 +39,7 @@ public class OutputTripTest {
         Long panInput = 4917610000000000003L;
         Long duration = 3000L;
 
-        OutputTrip outputTrip = new OutputTrip(date1, date2,
-                duration, "Stop1", "Stop3", "$7.30",
-                "Company30", "Bus21", panInput, "INCOMPLETE");
+        OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop3", "$7.30", "Company30", "Bus21", panInput, "INCOMPLETE");
 
         assertEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:00:00"));
         assertEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:50:00"));
@@ -64,9 +60,7 @@ public class OutputTripTest {
         Long panInput = 4484070000000000L;
         Long duration = 60L;
 
-        OutputTrip outputTrip = new OutputTrip(date1, date2,
-                duration, "Stop1", "Stop3", "$5",
-                "Company1", "Bus1", panInput, "COMPLETED");
+        OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop3", "$5", "Company1", "Bus1", panInput, "COMPLETED");
 
         assertNotEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 20:00:00"));
         assertNotEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 21:00:00"));

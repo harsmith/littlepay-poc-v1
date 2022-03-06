@@ -14,7 +14,7 @@ public class Application {
             // Handle a custom input file path
             inputFileName = args[0];
 
-        }else if (args.length == 2) {
+        } else if (args.length == 2) {
             // Handle a custom input & output file path
             inputFileName = args[0];
             outputFileName = args[1];

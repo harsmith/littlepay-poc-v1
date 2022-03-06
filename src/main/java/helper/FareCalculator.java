@@ -12,7 +12,7 @@ public class FareCalculator {
         for (int i = 1; i < priceMatrixSize; i++) {
             for (int j = 1; j < priceMatrixSize; j++) {
                 String price = "$0";
-                
+
                 if (i == j) {
                     multiKeyMap.put(new MultiKey<>("Stop" + i, "Stop" + j), price);
                     continue;

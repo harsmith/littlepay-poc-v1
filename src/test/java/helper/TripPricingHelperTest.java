@@ -23,7 +23,7 @@ public class TripPricingHelperTest {
         inputTrip2.setBusId("Bus123");
         inputTrip2.setPan(6011000400000000L);
 
-        assert(tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
+        assert (tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
     }
 
     @Test
@@ -38,7 +38,7 @@ public class TripPricingHelperTest {
         inputTrip2.setBusId("Bus1");
         inputTrip2.setPan(4484070000000000L);
 
-        assert(tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
+        assert (tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
     }
 
     @Test
@@ -53,7 +53,7 @@ public class TripPricingHelperTest {
         inputTrip2.setBusId("Bus2");
         inputTrip2.setPan(6799990100000000019L);
 
-        assert(!tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
+        assert (!tripPricingCalculator.identifierCheck(inputTrip1, inputTrip2));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class TripPricingHelperTest {
         InputTrip inputTrip2 = new InputTrip();
         inputTrip2.setTapType("OFF");
 
-        assert(tripPricingCalculator.tapOffCheck(inputTrip1, inputTrip2));
+        assert (tripPricingCalculator.tapOffCheck(inputTrip1, inputTrip2));
     }
 
     @Test
@@ -75,7 +75,7 @@ public class TripPricingHelperTest {
         InputTrip inputTrip2 = new InputTrip();
         inputTrip2.setTapType("OFF");
 
-        assert(!tripPricingCalculator.tapOffCheck(inputTrip1, inputTrip2));
+        assert (!tripPricingCalculator.tapOffCheck(inputTrip1, inputTrip2));
     }
 
     @Test
@@ -109,7 +109,7 @@ public class TripPricingHelperTest {
 
         OutputTrip outputTrip = new OutputTrip(startDate, endDate, 1200L, "Stop1", "Stop2", "$3.25", company, busId, pan, "COMPLETED");
 
-        assert(tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
+        assert (tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
     }
 
     @Test
@@ -143,7 +143,7 @@ public class TripPricingHelperTest {
 
         OutputTrip outputTrip = new OutputTrip(startDate, endDate, 86700L, "Stop1", "Stop3", "$7.30", company, busId, pan, "COMPLETED");
 
-        assert(tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
+        assert (tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
     }
 
     @Test
@@ -177,7 +177,7 @@ public class TripPricingHelperTest {
 
         OutputTrip outputTrip = new OutputTrip(startDate, endDate, 600L, "Stop1", "Stop1", "$0", company, busId, pan, "CANCELLED");
 
-        assert(tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
+        assert (tripPricingCalculator.calculatePriceOfCompletedTrip(inputTrip1, inputTrip2).toString().equals(outputTrip.toString()));
     }
 
     @Test
@@ -199,11 +199,11 @@ public class TripPricingHelperTest {
 
         OutputTrip outputTrip = new OutputTrip(startDate, startDate, 0L, "Stop1", "Stop1", "$7.30", company, busId, pan, "INCOMPLETE");
 
-        assert(tripPricingCalculator.calculatePriceOfIncompleteTrip(inputTrip1).toString().equals(outputTrip.toString()));
+        assert (tripPricingCalculator.calculatePriceOfIncompleteTrip(inputTrip1).toString().equals(outputTrip.toString()));
     }
 
     @Test
-    public void CalculatePriceOfIncompleteTripTest2() throws  ParseException {
+    public void CalculatePriceOfIncompleteTripTest2() throws ParseException {
         Date startDate = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("01-01-2017 01:00:00");
         String company = "Company1234";
         String busId = "Bus1234";
@@ -221,6 +221,6 @@ public class TripPricingHelperTest {
 
         OutputTrip outputTrip = new OutputTrip(startDate, startDate, 0L, "Stop2", "Stop2", "$5.50", company, busId, pan, "INCOMPLETE");
 
-        assert(tripPricingCalculator.calculatePriceOfIncompleteTrip(inputTrip1).toString().equals(outputTrip.toString()));
+        assert (tripPricingCalculator.calculatePriceOfIncompleteTrip(inputTrip1).toString().equals(outputTrip.toString()));
     }
 }

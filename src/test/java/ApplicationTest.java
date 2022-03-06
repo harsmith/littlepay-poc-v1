@@ -1,9 +1,9 @@
-
 import org.junit.Test;
 
 import java.io.*;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertThrows;
 
 public class ApplicationTest {
 
@@ -16,7 +16,7 @@ public class ApplicationTest {
         String[] inputString = {inputFileName, outputFileName};
 
         Application.main(inputString);
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -28,7 +28,7 @@ public class ApplicationTest {
         String[] inputString = {inputFileName, outputFileName};
 
         Application.main(inputString);
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class ApplicationTest {
         String[] inputString = {inputFileName, outputFileName};
 
         Application.main(inputString);
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -64,7 +64,7 @@ public class ApplicationTest {
         String[] inputString = {inputFileName, outputFileName};
 
         Application.main(inputString);
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -88,7 +88,7 @@ public class ApplicationTest {
         String[] inputString = {inputFileName, outputFileName};
 
         Application.main(inputString);
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -101,7 +101,7 @@ public class ApplicationTest {
 
         Application.main(inputString);
 
-        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -132,7 +132,7 @@ public class ApplicationTest {
         String fileAsString = "";
 
         String line;
-        while((line = br.readLine()) != null){
+        while ((line = br.readLine()) != null) {
             fileAsString += line;
         }
 

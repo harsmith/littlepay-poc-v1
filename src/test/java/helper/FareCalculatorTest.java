@@ -16,7 +16,7 @@ public class FareCalculatorTest {
     public void FareCalculatorTest2() {
         assertEquals(fareCalculator.calculate("Stop2", "Stop3"), "$5.50");
     }
-    
+
     @Test
     public void FareCalculatorTest3() {
         assertEquals(fareCalculator.calculate("Stop1", "Stop3"), "$7.30");
@@ -41,10 +41,12 @@ public class FareCalculatorTest {
     public void FareCalculatorTest7() {
         assertEquals(fareCalculator.calculate("Stop1", null), "$7.30");
     }
+
     @Test
     public void FareCalculatorTest8() {
         assertEquals(fareCalculator.calculate("Stop2", null), "$5.50");
     }
+
     @Test
     public void FareCalculatorTest9() {
         assertEquals(fareCalculator.calculate("Stop3", null), "$7.30");
