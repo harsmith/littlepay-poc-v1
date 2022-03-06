@@ -31,8 +31,8 @@ public class CsvUtilityTest {
 
         List<InputTrip> expectedInput = Arrays.asList(inputTrip);
 
-        assertEquals(input.size(), expectedInput.size());
-        assertEquals(input.get(0).toString(), expectedInput.get(0).toString());
+        assertEquals(expectedInput.size(), input.size());
+        assertEquals(expectedInput.get(0).toString(), input.get(0).toString());
     }
 
     @Test
@@ -50,8 +50,8 @@ public class CsvUtilityTest {
 
         List<InputTrip> expectedInput = Arrays.asList(inputTrip);
 
-        assertEquals(input.size(), expectedInput.size());
-        assertEquals(input.get(0).toString(), expectedInput.get(0).toString());
+        assertEquals(expectedInput.size(), input.size());
+        assertEquals(expectedInput.get(0).toString(), input.get(0).toString());
     }
 
     @Test

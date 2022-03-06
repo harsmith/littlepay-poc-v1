@@ -21,7 +21,7 @@ public class TripProcessorTest {
 
 
         tripProcessor.processTrips(inputFileName, outputFileName);
-        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class TripProcessorTest {
 
 
         tripProcessor.processTrips(inputFileName, outputFileName);
-        assert (readFile(outputFileName).equals(readFile(expectedFileName)));
+        assert(readFile(outputFileName).equals(readFile(expectedFileName)));
     }
 
     @Test
@@ -49,8 +49,8 @@ public class TripProcessorTest {
 
 
         List<OutputTrip> outputTripList = tripProcessor.analyseTrips(csvUtility.read(inputFileName));
-        assert (outputTripList.size() == 1);
-        assert (readFile(expectedFileName).equals(outputTripList.get(0).toString()));
+        assert(outputTripList.size() == 1);
+        assert(readFile(expectedFileName).equals(outputTripList.get(0).toString()));
     }
 
     @Test
@@ -60,8 +60,8 @@ public class TripProcessorTest {
 
 
         List<OutputTrip> outputTripList = tripProcessor.analyseTrips(csvUtility.read(inputFileName));
-        assert (outputTripList.size() == 1);
-        assert (readFile(expectedFileName).equals(outputTripList.get(0).toString()));
+        assert(outputTripList.size() == 1);
+        assert(readFile(expectedFileName).equals(outputTripList.get(0).toString()));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class TripProcessorTest {
         String inputFileName = "src/test/resources/helper/input/analyseTripsNegativeTest1.csv";
 
         List<OutputTrip> outputTripList = tripProcessor.analyseTrips(csvUtility.read(inputFileName));
-        assert (outputTripList.size() == 0);
+        assert(outputTripList.size() == 0);
     }
 
     @Test

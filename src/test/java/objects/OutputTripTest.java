@@ -20,16 +20,16 @@ public class OutputTripTest {
 
         OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop2", "$3.25", "Company71", "Bus3", panInput, "COMPLETE");
 
-        assertEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:00:00"));
-        assertEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:01:00"));
-        assertEquals(outputTrip.getDurationSeconds().longValue(), 60L);
-        assertEquals(outputTrip.getFromStopId(), "Stop1");
-        assertEquals(outputTrip.getToStopId(), "Stop2");
-        assertEquals(outputTrip.getFareAmount(), "$3.25");
-        assertEquals(outputTrip.getCompanyId(), "Company71");
-        assertEquals(outputTrip.getBusId(), "Bus3");
-        assertEquals(outputTrip.getPan().longValue(), 122000000000003L);
-        assertEquals(outputTrip.getStatus(), "COMPLETE");
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:00:00"), outputTrip.getStartDateTimeUtc());
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("19-03-2018 17:01:00"), outputTrip.getStopDateTimeUtc());
+        assertEquals(60L, outputTrip.getDurationSeconds().longValue());
+        assertEquals("Stop1", outputTrip.getFromStopId());
+        assertEquals("Stop2", outputTrip.getToStopId());
+        assertEquals("$3.25", outputTrip.getFareAmount());
+        assertEquals("Company71", outputTrip.getCompanyId());
+        assertEquals("Bus3", outputTrip.getBusId());
+        assertEquals(122000000000003L, outputTrip.getPan().longValue());
+        assertEquals("COMPLETE", outputTrip.getStatus());
     }
 
     @Test
@@ -41,16 +41,16 @@ public class OutputTripTest {
 
         OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop3", "$7.30", "Company30", "Bus21", panInput, "INCOMPLETE");
 
-        assertEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:00:00"));
-        assertEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:50:00"));
-        assertEquals(outputTrip.getDurationSeconds().longValue(), 3000L);
-        assertEquals(outputTrip.getFromStopId(), "Stop1");
-        assertEquals(outputTrip.getToStopId(), "Stop3");
-        assertEquals(outputTrip.getFareAmount(), "$7.30");
-        assertEquals(outputTrip.getCompanyId(), "Company30");
-        assertEquals(outputTrip.getBusId(), "Bus21");
-        assertEquals(outputTrip.getPan().longValue(), 4917610000000000003L);
-        assertEquals(outputTrip.getStatus(), "INCOMPLETE");
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:00:00"), outputTrip.getStartDateTimeUtc());
+        assertEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("20-04-2018 18:50:00"), outputTrip.getStopDateTimeUtc());
+        assertEquals(3000L, outputTrip.getDurationSeconds().longValue());
+        assertEquals("Stop1", outputTrip.getFromStopId());
+        assertEquals("Stop3", outputTrip.getToStopId());
+        assertEquals("$7.30", outputTrip.getFareAmount());
+        assertEquals("Company30", outputTrip.getCompanyId());
+        assertEquals("Bus21", outputTrip.getBusId());
+        assertEquals(4917610000000000003L, outputTrip.getPan().longValue());
+        assertEquals("INCOMPLETE", outputTrip.getStatus());
     }
 
     @Test
@@ -62,15 +62,15 @@ public class OutputTripTest {
 
         OutputTrip outputTrip = new OutputTrip(date1, date2, duration, "Stop1", "Stop3", "$5", "Company1", "Bus1", panInput, "COMPLETED");
 
-        assertNotEquals(outputTrip.getStartDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 20:00:00"));
-        assertNotEquals(outputTrip.getStopDateTimeUtc(), new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 21:00:00"));
-        assertNotEquals(outputTrip.getDurationSeconds().longValue(), 100L);
-        assertNotEquals(outputTrip.getToStopId(), "Stop1");
-        assertNotEquals(outputTrip.getFromStopId(), "Stop2");
-        assertNotEquals(outputTrip.getFareAmount(), "$3.25");
-        assertNotEquals(outputTrip.getCompanyId(), "Company2");
-        assertNotEquals(outputTrip.getBusId(), "Bus2");
-        assertNotEquals(outputTrip.getPan().longValue(), 4917610000000000L);
-        assertNotEquals(outputTrip.getStatus(), "INCOMPLETE");
+        assertNotEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 20:00:00"), outputTrip.getStartDateTimeUtc());
+        assertNotEquals(new SimpleDateFormat("dd-MM-yyyy HH:mm:ss").parse("25-04-2018 21:00:00"), outputTrip.getStopDateTimeUtc());
+        assertNotEquals(100L, outputTrip.getDurationSeconds().longValue());
+        assertNotEquals("Stop1", outputTrip.getToStopId());
+        assertNotEquals("Stop2", outputTrip.getFromStopId());
+        assertNotEquals("$3.25", outputTrip.getFareAmount());
+        assertNotEquals("Company2", outputTrip.getCompanyId());
+        assertNotEquals("Bus2", outputTrip.getBusId());
+        assertNotEquals(4917610000000000L, outputTrip.getPan().longValue());
+        assertNotEquals("INCOMPLETE", outputTrip.getStatus());
     }
 }
