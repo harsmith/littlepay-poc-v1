@@ -1,0 +1,2 @@
+Started,Finished,DurationSecs,FromStopId,ToStopId,ChargeAmount,companyId,BusID,PAN,Status
+30-04-2018 23:00:00,30-04-2018 23:00:00,0,Stop1,Stop2,$0,Company31,Bus89,630490017740292441,INCOMPLETE
