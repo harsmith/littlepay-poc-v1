@@ -1,13 +1,14 @@
 # littlepay-poc-v1
-*Summary*
+## Summary
 
 We need to create a Java application which when given an input file in CSV format containing a single tap on or tap off per line we can create an output file containing trips made by customers.
 
-*Requirements*
+## Requirements
 - Maven 3.8.3+
 - Java 17
 
-*How to run the application*
+## How to run the application
+
 Ensure the code is able to be compiled and runs all the tests by using the following command. This will also execute the code against the default trips and taps csv files.
 
 `mvn clean install`
@@ -20,7 +21,7 @@ Whereas, you can also do the following command to specify a custom input and out
 
 `mvn compile exec:java -Dexec.mainClass="Application" -Dexec.arguments="src/main/resources/taps-custom.csv,src/main/resources/trips-custom.csv"`
 
-*Assumptions*
+## Assumptions
  - All cards used in transactions have enough money to pay for the fare when the initial touch on happens.
  - There are only 3 types of trips.
  - For each touch on, there is a corresponding touch off or no action. Therefore, a touch on can’t happen twice on the same bus and a touch off can’t happen without a touch on.
