@@ -13,11 +13,11 @@ Ensure the code is able to be compiled and runs all the tests by using the follo
 
 `mvn clean install`
 
-Executing the code with a custom input file, this needs to be an absolute path if its not with the project structure. However, if its inside the project you can use a relative path. The following command is for only suppling an example input file.
+You can also execute the code with a custom input file. This needs to be an absolute path if its not with the project structure. However, if its inside the project you can use a relative path. The following command is for only suppling an example input file.
 
 `mvn compile exec:java -Dexec.mainClass="Application" -Dexec.arguments="src/main/resources/taps.csv"`
 
-Whereas, you can also do the following command to specify a custom input and output.
+The following command can be used to specify a custom input and output file.
 
 `mvn compile exec:java -Dexec.mainClass="Application" -Dexec.arguments="src/main/resources/taps-custom.csv,src/main/resources/trips-custom.csv"`
 
